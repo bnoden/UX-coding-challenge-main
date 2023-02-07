@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UX/UI Developer Take-Home Coding Challenge</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="reset">
+        <img src="../assets/close-icon.svg" alt="close screen" />
+      </div>
+      <div class="form-wrapper">
+        <div class="overlay">
+          <img class="chat-icon" src="../assets/chat-icon.svg" alt="chat" />
+          <h3 class="success">Successfully Signed In!</h3>
+        </div>
+        <div class="header">
+          <h1>SIGN IN</h1>
+        </div>
+
+        <form>
+          <div class="email">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required />
+            <img
+              src="../assets/danger-circle-icon.svg"
+              alt="danger"
+              class="danger"
+              id="emailDanger"
+            />
+          </div>
+
+          <div class="password">
+            <label for="password">
+              Password
+
+              <a href="#">Forgot your password?</a>
+            </label>
+            <input type="password" id="password" name="password" required />
+            <img
+              src="../assets/eye-show-icon.svg"
+              alt="eye-show"
+              class="eye-icon"
+              onclick="togglePasswordVisibility()"
+            />
+            <img
+              src="../assets/danger-circle-icon.svg"
+              alt="danger"
+              class="danger"
+              id="passwordDanger"
+            />
+          </div>
+
+          <div class="remember">
+            <input type="checkbox" id="remember" name="remember" />
+            <label for="remember">Remember Me</label>
+          </div>
+          <div class="cta">
+            <button type="submit">CONTINUE</button>
+          </div>
+
+          <p class="signUp">
+            Don't have an account? <a href="/signup">Sign Up</a>
+          </p>
+        </form>
+      </div>
+    </div>
+    <script src="js/validator.js"></script>
+  </body>
+</html>

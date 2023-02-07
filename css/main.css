@@ -1,0 +1,267 @@
+/* Root Variables */
+
+:root {
+  --color-gradient: linear-gradient(
+    203.72deg,
+    rgba(173, 228, 245, 0.7) 17.72%,
+    rgba(122, 115, 255, 0.7) 93.98%
+  );
+  --color-primary: #664de5;
+  --color-secondary: #fff;
+  --color-hover: rgba(255, 255, 255, 0.8);
+  --border-caution: 1px solid #ff0000;
+}
+
+/* Main CSS file -------------------------------------------------------------------------------------*/
+
+/* Reset CSS ----------------------------------------------------- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  font-family: "Open Sans", sans-serif;
+  background: var(--color-gradient);
+}
+
+/* Typography ---------------------------------------------------- */
+
+a {
+  color: white;
+  font-weight: 200;
+}
+
+p {
+  font-size: 0.8rem;
+}
+
+/* Container ----------------------------------------------------- */
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  flex-direction: column;
+}
+
+.form-wrapper {
+  background-color: #fff;
+  border-radius: 15px;
+  width: 100%;
+  height: 100%;
+  max-width: 450px;
+  min-width: 300px;
+  max-height: 518px;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  position: relative;
+  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 768px) {
+  .form-wrapper {
+    width: 70%;
+  }
+}
+
+
+/* Layout -------------------------------------------------------- */
+
+
+h1 {
+  color: var(--color-primary);
+  font-size: 40px;
+  font-weight: 600;
+  position: absolute;
+  top: 8px;
+  left: 30px;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.75rem;
+  height: 100%;
+  background-color: var(--color-primary);
+  border-radius: 15px;
+  clip-path: polygon(0 26%, 100% 15%, 100% 100%, 0% 100%);
+  flex-direction: column;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--color-secondary);
+  font-size: 14px;
+}
+
+/* Inputs & Labels ----------------------------------------------- */
+
+.email,
+.password,
+.remember {
+  width: 100%;
+}
+
+.email {
+  margin-top: 36%;
+}
+
+.password {
+  margin-top: 5%;
+}
+
+.password a {
+  font-size: 12px;
+}
+
+input {
+  width: 100%;
+  height: 2.9rem;
+  border-radius: 5px;
+  border: none;
+}
+
+label[for="password"] {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 0.2rem;
+}
+
+label[for="email"] {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 0.2rem;
+}
+
+.password a {
+  text-decoration: none;
+  color: var(--color-secondary);
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+.password {
+  position: relative;
+}
+
+.remember {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 1rem;
+  margin-left: -8px;
+}
+
+input[type="checkbox"] {
+  width: 22px;
+  height: 22px;
+  clip-path: circle(55% at 50% 50%);
+}
+
+label[for="remember"] {
+  margin-left: 0.5rem;
+  font-weight: 400;
+}
+
+/* Icons & Images ------------------------------------------------------ */
+
+.danger {
+  position: absolute;
+  left: 390px;
+  margin-top: -35px;
+  z-index: 100;
+  display: none;
+}
+
+.eye-icon {
+  cursor: pointer;
+  width: 23px;
+  height: 23px;
+  position: absolute;
+  margin-left: -2rem;
+  margin-top: 0.75rem;
+}
+
+.warning-icon img {
+  position: absolute;
+  top: 10px;
+}
+
+/* Button ---------------------------------------------------------------  */
+
+.cta {
+  padding: 1.7rem 0 1rem 0;
+}
+
+button {
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+  padding: 1.06rem 5.5rem 1.04rem 5.5rem;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  font-weight: bolder;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+/* SignUp Text ------------------------------------------------------------------ */
+
+.signUp {
+  letter-spacing: 0.4pt;
+  margin-top: 1rem;
+}
+
+
+
+/* Sign In Successful Page Start ------------------------------------------------- */
+
+.overlay {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 15px;
+  background-color: var(--color-primary);
+  z-index: 99;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.success {
+  font-size: 24px;
+  font-weight: 400;
+  color: var(--color-secondary);
+  margin-top: -1.5rem;
+}
+
+.reset {
+  display: none;
+  width: 50px;
+  height: 50px;
+  background-color: var(--color-secondary);
+  border-radius: 50px;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  margin-top: -32rem;
+  margin-left: 28rem;
+  z-index: 100;
+  cursor: pointer;
+}
+
+/* Sign In Succvessful Page End ------------------------------------------------- */
