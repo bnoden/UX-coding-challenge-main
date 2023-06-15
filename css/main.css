@@ -79,7 +79,7 @@ p {
 
 
 h1 {
-  color: var(--color-primary);
+  color: red;
   font-size: 40px;
   font-weight: 600;
   position: absolute;
