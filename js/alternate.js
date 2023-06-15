@@ -58,6 +58,7 @@ form.addEventListener("submit", function (event) {
     emailDanger.style.display = "none";
     errors.email = null;
   }
+  
   if (!passwordInput.value || passwordInput.value.length < 8) {
     passwordInput.style.border = "var(--border-caution)";
     passwordInput.style.backgroundImage =
